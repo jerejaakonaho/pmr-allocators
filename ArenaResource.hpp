@@ -5,7 +5,7 @@
 class ArenaResource final : public std::pmr::memory_resource {
 public:
     explicit ArenaResource(std::size_t size);
-    ~ArenaResource() override;
+    ~ArenaResource() override; // override std::pmr::memory_resource destructor
 
     ArenaResource(const ArenaResource&) = delete;
     ArenaResource& operator=(const ArenaResource&) = delete;

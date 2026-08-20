@@ -14,8 +14,8 @@ public:
 
 private:
     std::byte* start_address_{nullptr};
-    std::size_t offset_{};
-    std::size_t total_size_{};
+    std::size_t offset_{0};
+    std::size_t total_size_{0};
 
     // Override std::pmr::memory_resource virtual methods
     void* do_allocate(std::size_t bytes, std::size_t alignment) override;
